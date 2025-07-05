@@ -6,8 +6,8 @@
         Width="1200"
         Icon="Assets/appicon.ico"
         WindowStyle="None"
-        AllowsTransparency="True">
-
+        AllowsTransparency="True"
+        xmlns:editors="http://icsharpcode.net/sharpdevelop/avalonedit">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -57,20 +57,22 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="Column0"
-                        Width="*"/>
+                                  Width="*"/>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition x:Name="Column2"
-                        Width="*"/>
+                                  Width="*"/>
             </Grid.ColumnDefinitions>
 
             <!-- Left: Markdown editor -->
-            <TextBox Grid.Column="0"
-                     AcceptsReturn="True"
-                     VerticalScrollBarVisibility="Auto"
-                     HorizontalScrollBarVisibility="Auto"
-                     FontFamily="Consolas"
-                     FontSize="14"
-                     TextWrapping="Wrap"/>
+            <editors:TextEditor Grid.Column="0"
+                    x:Name="markdownEditor"
+                    ShowLineNumbers="True"
+                    FontFamily="Consolas"
+                    FontSize="14"
+                    VerticalScrollBarVisibility="Auto"
+                    HorizontalScrollBarVisibility="Auto"
+                    WordWrap="true"
+                    />
 
             <!-- Middle: Resizer -->
             <Grid Grid.Column="1"
