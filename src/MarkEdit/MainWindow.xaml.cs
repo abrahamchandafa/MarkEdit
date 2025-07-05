@@ -41,4 +41,16 @@ public partial class MainWindow : Window
     {
         this.Close();
     }
+
+    private void Resizer_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+{
+    double newLeftWidth = Column0.ActualWidth + e.HorizontalChange;
+    double newRightWidth = Column2.ActualWidth - e.HorizontalChange;
+
+    if (newLeftWidth > 200 && newRightWidth > 200)
+    {
+        Column0.Width = new GridLength(newLeftWidth, GridUnitType.Star);
+        Column2.Width = new GridLength(newRightWidth, GridUnitType.Star);
+    }
+}
 }
