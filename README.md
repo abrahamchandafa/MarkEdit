@@ -1,2 +1,2 @@
 # MarkEdit
-AI-powered WYSIWYG Markdown Editor for Windows
+AI-powered WYSIWYG LaTeX Editor for Windows
